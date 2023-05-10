@@ -84,10 +84,10 @@ export default class Recaptcha extends Component {
     }
   }
 
-  execute() {
+  execute(options) {
     const { ready, widget } = this.state;
     if (ready && widget !== null) {
-      grecaptcha.execute(widget);
+      grecaptcha.execute(widget, options);
     }
   }
 
